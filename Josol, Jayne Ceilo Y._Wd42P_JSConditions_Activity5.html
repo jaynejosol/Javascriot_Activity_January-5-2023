@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Find the number of days in a given month of a year</title> 
+    </head>
+
+    <body>
+
+    <script>
+        let month = prompt("Input Month");
+        let year = prompt("Enter Year");
+        month = parseInt(month);
+        year = parseInt(year);
+            if (month < 1 || month > 12) 
+            {
+                window.alert("Invalid month, try again");
+              //  console.log("Invalid month, try again");
+            }
+            if  ([4, 6, 9, 11].includes(month))
+            {
+                window.alert('30 days');
+             //   console.log('30 days');
+            }
+            if ([1, 3, 5, 7, 8, 10, 12].includes(month))
+            {
+                window.alert('31 days');
+              //  console.log('31 days');
+            }
+            else if (year % 400 == 0 && month === 2)
+            {
+                window.alert('28 days');
+              //  console.log('28 days');
+            }
+            else if (year % 4 == 0 && month === 2)
+            {
+                window.alert('28 days');
+               // console.log('28 days');
+            }
+            else
+            {
+                window.alert('29 days');
+             //   console.log('29 days');
+            }
+    </script>
+
+    </body>
+
+</html>
